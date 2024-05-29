@@ -46,7 +46,6 @@ export function AuthProvider({ children }: PropsWithChildren) {
 
             try {
                 await Api.post('/id/', {
-                    
                     auth: null,
                     data: {
                         uid: identity.current.uid,
@@ -59,11 +58,10 @@ export function AuthProvider({ children }: PropsWithChildren) {
             } catch ({ message }: any) {
                 const error = message as string;
 
-                if (error == 'not_found') {
+                if (error == 'user_not_found') {
                     navigate(`/id/register`)
                 }
                 else {
-                    // alert(error);
                     navigate(`/error/${error}`)
                 }
             }
