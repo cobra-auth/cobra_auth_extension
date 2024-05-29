@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "University Authenticatior",
+    "version": "1.0.0",
+    "description": "To prevent you brokies from destroying your own future.",
+    "action": {
+        "default_popup": "./index.html",
+        "default_icon": {
+            "16": "./icon16.png",
+            "24": "./icon24.png",
+            "32": "./icon32.png"
+        }
+    },
+    "permissions": [
+        "tabs",
+        "identity",
+        "identity.email",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://app.university.com/*",
+        "https://app.jointherealworld.com/*",
+        "https://therealworld.ag/*",
+        "https://www.tradingview.com/*"
+    ]
+}
