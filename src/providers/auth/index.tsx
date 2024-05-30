@@ -2,14 +2,9 @@ import { PropsWithChildren, ReactElement, useContext, useEffect, useState } from
 import { useIdentity } from "../identity";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useStorage } from "../../hooks";
-import { Api } from "../../api";
 import { AUTH_CONTEXT } from "./context";
 import { HashToken } from "../../token";
-
-export interface Packet<T> {
-    auth: string | null
-    data: T,
-}
+import { Api } from "@pandorae-libertas/cobra-api";
 
 export function AuthProvider({ children }: PropsWithChildren) {
     const navigate = useNavigate()
