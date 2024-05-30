@@ -15,15 +15,17 @@ export function useQuery() {
     return (async function <T = string>(endpoint: string, data: any | null): Promise<QueryResponse<T>> {
         const auth = current();
 
+        
         try {
             const response = await Api.post<T>(endpoint, {
                 auth: auth,
                 data,
             });
-
+            
             if (!response) {
                 throw new Error('response cannot be null')
             }
+            
             await update(response.auth);
 
             return {

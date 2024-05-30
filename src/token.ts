@@ -1,6 +1,6 @@
 export class HashToken{
     private uid: string;
-    private exp: number
+    private exp: number;
 
     private constructor(uid: string, exp: number){
         this.uid = uid;
