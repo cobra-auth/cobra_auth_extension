@@ -40,7 +40,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
             }
 
             try {
-                await Api.post('/id/', {
+                await Api.post('/id', {
                     auth: null,
                     data: {
                         uid: identity.current.uid,

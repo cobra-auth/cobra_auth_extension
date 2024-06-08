@@ -44,7 +44,7 @@ export function SubInit() {
         else {
             try {
 
-                const response = await query<SubQueryResult>('/sub/', null);
+                const response = await query<SubQueryResult>('/sub', null);
 
                 if (response.result) {
                     if (response.result.success) {

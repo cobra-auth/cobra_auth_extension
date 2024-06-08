@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "University Authenticatior",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "To prevent you brokies from destroying your own future.",
     "action": {
         "default_popup": "./index.html",
