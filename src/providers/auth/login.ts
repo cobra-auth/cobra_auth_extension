@@ -8,7 +8,7 @@ export function useLogin() {
 
     return async (identity: Identity, password: string) => {
         try {
-            return await query('/id/login', {
+            return await query('/user/login', {
                 uid: identity.uid,
                 priv_key: await hash(password, password)
             })

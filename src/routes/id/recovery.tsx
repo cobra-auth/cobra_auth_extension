@@ -29,7 +29,7 @@ export function RecoveryAuth() {
             const value: string | undefined = (document.getElementById('rec_key_input') as any)?.value
             if (value) {
                 try {
-                    const response = await query('/id/recovery/verify', {
+                    const response = await query('/user/recovery/verify', {
                         uid: identity.current.uid,
                         rec_key: value
                     })

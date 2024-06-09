@@ -8,7 +8,7 @@ export function useRecover() {
 
     return async (identity: Identity, rec_key: string, password: string, passwordConfirm: string) => {
         try {
-            return await query('/id/recovery/reset', {
+            return await query('/user/recovery/reset', {
                 rec_key,
                 uid: identity.uid,
                 priv_key: await hash(password, passwordConfirm)
