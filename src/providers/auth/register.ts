@@ -10,7 +10,7 @@ export function useRegister() {
 
     return async (identity: Identity, chrome: ChromeIdentity, tradingview: TvIdentity, password: string, passwordConfirm: string) => {
         try {
-            return await query('/id/register', {
+            return await query('/user/register', {
                 uid: identity.uid,
                 email: chrome.email,
                 username: identity.username,
