@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "University Authenticatior",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "To prevent you brokies from destroying your own future.",
     "action": {
         "default_popup": "./index.html",
@@ -21,6 +21,7 @@
         "https://app.university.com/*",
         "https://app.jointherealworld.com/*",
         "https://therealworld.ag/*",
-        "https://www.tradingview.com/*"
+        "https://www.tradingview.*",
+        "https://in.tradingview.*"
     ]
 }
