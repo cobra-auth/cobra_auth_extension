@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AUTH_CONTEXT } from "./context";
-import { Api } from "@pandorae-libertas/cobra-api";
+import { Api } from "../../api";
 
 export interface QueryResponse<T = string> {
     result: T | null | undefined,
@@ -12,7 +12,7 @@ export function useQuery() {
     const navigate = useNavigate();
     const { update, current } = useContext(AUTH_CONTEXT);
 
-    return (async function <T = string>(endpoint: string, data: any | null): Promise<QueryResponse<T>> {
+    return (async function <T extends string | number | object = string>(endpoint: string, data: any | null): Promise<QueryResponse<T>> {
         const auth = current();
 
         

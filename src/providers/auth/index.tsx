@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useStorage } from "../../hooks";
 import { AUTH_CONTEXT } from "./context";
 import { HashToken } from "../../token";
-import { Api } from "@pandorae-libertas/cobra-api";
+import { Api } from "../../api";
 
 export function AuthProvider({ children }: PropsWithChildren) {
     const navigate = useNavigate()
