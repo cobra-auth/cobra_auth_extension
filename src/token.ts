@@ -1,18 +1,18 @@
 export class HashToken{
-    private uid: string;
-    private exp: number;
+    private _uid: string;
+    private _exp: number;
 
     private constructor(uid: string, exp: number){
-        this.uid = uid;
-        this.exp = exp;
+        this._uid = uid;
+        this._exp = exp;
     }
 
-    public get trwUid(){
-        return this.uid;
+    public get uid(){
+        return this._uid;
     }
 
     public get expiration(){
-        return this.exp;
+        return this._exp;
     }
 
     public static parse(data: string) {

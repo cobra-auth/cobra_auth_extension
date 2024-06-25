@@ -128,7 +128,7 @@ export function RecoveryForm() {
                     updateFeedback(getErrorMessage(response.error));
                 }
                 else {
-                    navigate(`/id/register/${response.result}`)
+                    navigate(`/id/register/`)
                     updateFeedback(undefined)
                 }
             } catch {

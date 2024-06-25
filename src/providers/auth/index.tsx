@@ -24,7 +24,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
 
             if (hash) {
                 try {
-                    const {expiration, trwUid: trw_uid} = HashToken.parse(hash)
+                    const {expiration, uid: trw_uid} = HashToken.parse(hash)
 
                     const expired = expiration <= new Date().valueOf();
                     const idChanged = trw_uid != identity.current.uid
