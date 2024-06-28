@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { Heading2, Button } from "../components";
+import { Heading2, Button } from "../../components";
 import { useMemo } from "react";
 
 export function Error() {

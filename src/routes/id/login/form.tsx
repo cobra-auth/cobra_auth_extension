@@ -1,28 +1,11 @@
-import { useNavigate } from "react-router-dom";
-import { Button, Heading1, Heading3, Input, Label } from "../../components";
-import { useIdentity } from "../../providers/identity";
-import { useLogin } from "../../providers/auth/login";
 import { FormEvent, useMemo, useState } from "react";
+import { useIdentity } from "../../../providers/identity";
+import { useLogin } from "../../../providers/auth/login";
 import logo from '../../images/logo-512.png';
 import { Loader2 } from "lucide-react";
-import { getErrorMessage } from "../../error";
-
-export function LoginInit() {
-    const identity = useIdentity();
-    const navigate = useNavigate();
-
-    return (
-        <div className="h-full  w-full flex flex-col justify-between">
-            <div className='w-full animate-fade-in flex text-center flex-col gap-1'>
-                <Heading1 className='mx-auto'>Welcome!</Heading1>
-                <Heading3 className='mx-auto text-base text-neutral-300 font-semibold'>{identity.current?.username}</Heading3>
-            </div>
-            <Button onClick={() => navigate('./form')}>
-                Sign In
-            </Button>
-        </div>
-    )
-}
+import { getErrorMessage } from "../../../error";
+import { useNavigate } from "react-router-dom";
+import { Button, Heading1, Heading3, Input, Label } from "../../../components";
 
 export function LoginForm() {
     const identity = useIdentity();

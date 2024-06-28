@@ -5,7 +5,7 @@ import { Layout } from "./layouts";
 import { Error } from "./routes/error";
 import { RegisterForm, RegisterChrome, RegisterInit, RegisterTradingView, RegisterCode } from "./routes/id/register";
 import { StageLayout } from "./layouts/stage";
-import { LoginForm, LoginInit } from "./routes/id/login";
+import {  LoginForm, LoginInit } from "./routes/id/login";
 import { SubHistory, SubInit, SubPending, SubResult, SubTimeout } from "./routes/sub";
 import { RecoveryAuth, RecoveryForm } from "./routes/id/recovery";
 import { Browser, useBrowser } from "./hooks/browser";
