@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Heading1 } from "../../components";
-import logo from '../images/logo-512.png';
+import logo from '../../images/logo-512.png';
 import { ArrowLeft, Check, Clock, CopyIcon, EyeOff, Loader2 } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import { HashToken } from "../../token";

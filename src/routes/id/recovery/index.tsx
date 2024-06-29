@@ -1,7 +1,7 @@
 import { Button, Heading1, Heading3, Input, Label } from "../../../components";
 import { useIdentity } from "../../../providers/identity";
 import { FormEvent, useMemo, useState } from "react";
-import logo from '../../images/logo-512.png';
+import logo from '../../../images/logo-512.png';
 import {Loader2 } from "lucide-react";
 import { StageButton } from "../../../layouts/stage";
 import { useQuery } from "../../../providers/auth";

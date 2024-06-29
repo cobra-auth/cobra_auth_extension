@@ -1,7 +1,7 @@
 import { FormEvent, useMemo, useState } from "react";
 import { useIdentity } from "../../../providers/identity";
 import { useLogin } from "../../../providers/auth/login";
-import logo from '../../images/logo-512.png';
+import logo from '../../../images/logo-512.png';
 import { Loader2 } from "lucide-react";
 import { getErrorMessage } from "../../../error";
 import { useNavigate } from "react-router-dom";

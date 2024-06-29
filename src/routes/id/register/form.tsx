@@ -6,7 +6,7 @@ import { FormEvent, useMemo, useState } from "react";
 import { Loader2 } from "lucide-react";
 import { useTradingView } from "../../../providers/identity/tradingview";
 import { useChrome } from "../../../providers/identity/chrome";
-import logo from '../../images/logo-512.png';
+import logo from '../../../images/logo-512.png';
 import { getErrorMessage } from "../../../error";
 
 export function RegisterForm() {

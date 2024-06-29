@@ -19,11 +19,8 @@
     ],
     "host_permissions": [
         "https://app.university.com/*",
-        "https://app.university.com/*",
-        "https://therealworld.ag/*",
-        "https://alpha.therealworld.ag/*",
-        "https://www.tradingview.*",
-        "https://in.tradingview.*",
-        "https://de.tradingview.*"
+        "https://app.jointherealworld.com/*",
+        "https://*.therealworld.ag/*",
+        "https://*.tradingview.com/*"
     ]
 }

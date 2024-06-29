@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Button, Heading1, Heading3 } from "../../../components";
 import {EyeOff, Loader2 } from "lucide-react";
 import { useChrome } from "../../../providers/identity/chrome";
-import google from '../../images/google.svg';
+import google from '../../../images/google.svg';
 
 export function RegisterChrome() {
     const chromeIdentity = useChrome();

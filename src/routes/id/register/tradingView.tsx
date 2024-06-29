@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Button, Heading1, Heading3 } from "../../../components";
 import {EyeOff, Loader2 } from "lucide-react";
 import { useTradingView } from "../../../providers/identity/tradingview";
-import tradingview from '../../images/tradingview.png';
+import tradingview from '../../../images/tradingview.png';
 
 export function RegisterTradingView() {
     const tvIdentity = useTradingView();

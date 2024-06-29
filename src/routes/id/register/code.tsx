@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Button, Heading1 } from "../../../components";
 import { useState } from "react";
 import { Check, CopyIcon, EyeOff } from "lucide-react";
-import logo from '../../images/logo-512.png';
+import logo from '../../../images/logo-512.png';
 
 export function RegisterCode() {
     const params = useParams();
