@@ -14,6 +14,7 @@ export function LoginInit() {
                 <Heading1 className='mx-auto'>Welcome!</Heading1>
                 <Heading3 className='mx-auto text-base text-neutral-300 font-semibold'>{identity.current?.username}</Heading3>
             </div>
+            
             <Button onClick={() => navigate('./form')}>
                 Sign In
             </Button>

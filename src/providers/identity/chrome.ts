@@ -6,12 +6,16 @@ export function useChrome() {
     const [loading, updateLoading] = useState(true)
     const [current, updateCurrent] = useState<chrome.identity.UserInfo | null>(null)
 
+    // 54633874682-803v8ebmdsgnj238un2cruufcbhm8r98.apps.googleusercontent.com
+
     useEffect(() => {
         update()
     }, [])
 
     function update() {
         updateLoading(true);
+
+        
 
         // [ ] implement for brave router
         // chrome.identity.getAuthToken({ interactive: true }).then(x => {

@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "University Authenticatior",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "To prevent you brokies from destroying your own future.",
     "action": {
         "default_popup": "./index.html",
@@ -18,9 +18,9 @@
         "scripting"
     ],
     "host_permissions": [
-        "https://app.university.com/*",
-        "https://app.jointherealworld.com/*",
-        "https://*.therealworld.ag/*",
-        "https://*.tradingview.com/*"
+        "*://*.university.com/*",
+        "*://*.jointherealworld.com/*",
+        "*://*.therealworld.ag/*",
+        "*://*.tradingview.com/*"
     ]
 }
