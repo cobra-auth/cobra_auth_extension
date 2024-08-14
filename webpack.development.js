@@ -1,5 +1,8 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
+const { DefinePlugin } = require('webpack')
+
+require('dotenv').config({ path: './_development.env' });
 
 module.exports = merge(common, {
   mode: 'development',
@@ -16,4 +19,9 @@ module.exports = merge(common, {
   stats: {
     errorDetails: true,
   },
+  plugins: [
+    new DefinePlugin({
+      "process.env": JSON.stringify(process.env),
+    }),
+  ]
 });

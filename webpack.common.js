@@ -1,12 +1,17 @@
-const path = require('path');
-const webpack = require('webpack')
-require('dotenv').config({ path: './.env' });
-
+const { DefinePlugin, ProvidePlugin } = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+// const { sha256 } = require('js-sha256');
+const { readFileSync } = require('fs')
+
+const path = require('path');
+const stylesheet = readFileSync('src/styles.css', 'utf8')
 
 module.exports = {
-  entry: './src/index.tsx',
+  entry: {
+    main: './src/index.tsx',
+    background: './src/background.ts',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
@@ -18,11 +23,11 @@ module.exports = {
         { from: 'src/images' }
       ],
     }),
-    new webpack.ProvidePlugin({
+    new ProvidePlugin({
       Buffer: ['buffer', 'Buffer'],
     }),
-    new webpack.DefinePlugin({
-      "process.env": JSON.stringify(process.env),
+    new DefinePlugin({
+      "process.stylesheet": JSON.stringify({ content: stylesheet }),
     }),
   ],
   module: {
@@ -34,7 +39,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader', 'raw-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
@@ -53,7 +58,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'build'),
     clean: true,
   },

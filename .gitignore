@@ -14,10 +14,14 @@ jspm_packages/
 
 # Coverage directories
 coverage/
+*.key
+*.env
 
 # Build output
 build/
 dist/
+
+client_secret*
 
 # yarn v2
 .yarn/cache

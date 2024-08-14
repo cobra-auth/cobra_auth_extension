@@ -102,3 +102,11 @@ body {
 /* .logo-in {
   animation: .15s logo cubic-bezier(0.4, 0, 0.2, 1) all;
 } */
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
